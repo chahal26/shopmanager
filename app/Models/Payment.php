@@ -14,4 +14,9 @@ class Payment extends Model
         'amount_paid',
         'payment_mode'
     ];
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }
