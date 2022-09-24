@@ -83,6 +83,7 @@ class AddOrder extends Page
         if($order_details == null){
             return 0 ;
         }
+        $amound_paid = $amound_paid == '' ? 0 : $amound_paid;
         $total = 0;
         foreach($order_details as $ord){
             $price = $ord['price'] == '' ? 0 : $ord['price'] ;
