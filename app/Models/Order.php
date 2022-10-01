@@ -25,13 +25,6 @@ class Order extends Model
         );
     }
 
-    protected function orderDate(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => Carbon::parse($this->created_at)->format('M d, Y'),
-        );
-    }
-
     public function customer()
     {
         return $this->belongsTo(Customer::class);
