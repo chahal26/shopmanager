@@ -11,7 +11,7 @@ class ViewOrders extends Page implements Tables\Contracts\HasTable
 {
     use Tables\Concerns\InteractsWithTable;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-eye';
 
     protected static string $view = 'filament.pages.view-orders';
 
@@ -31,7 +31,8 @@ class ViewOrders extends Page implements Tables\Contracts\HasTable
                     'success' => 'cash',
                     'warning' => 'online',
                 ]), 
-            Tables\Columns\TextColumn::make('orderDate'), 
+            Tables\Columns\TextColumn::make('created_at')
+                ->date(), 
         ];
     }
 

@@ -13,7 +13,7 @@ use App\Models\Payment;
 
 class AddOrder extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-cart';
 
     protected static string $view = 'filament.pages.add-order';
 
